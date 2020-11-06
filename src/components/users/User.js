@@ -8,9 +8,6 @@ import { GET_USER_AND_REPOS, SET_LOADING  } from '../../context/types'
 
 const User = ({ match: { params } }) => {
 
-   
-
-
   const {
     user : {
     name,
@@ -39,11 +36,13 @@ const User = ({ match: { params } }) => {
       dispatch({
         type:GET_USER_AND_REPOS,payload:res
 
-    }))
+    })
+    )
+    // eslint-disable-next-line
     
-  }, [dispatch.params.login]);
+  }, [dispatch,params.login]);
 
-// eslint-disable-next-line
+
   if (loading) return <Spinner />;
   return (
     <Fragment>

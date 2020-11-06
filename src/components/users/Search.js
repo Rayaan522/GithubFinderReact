@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
 import GithubContext from '../../context/github/githubContext';
 import AlertContext from '../../context/alert/alertContext';
-import {searchUsers} from '../../context/github/actions';
+import { searchUsers } from '../../context/github/actions';
 import { CLEAR_USERS, SEARCH_USERS, SET_LOADING } from '../../context/types';
 
 const Search = () => {

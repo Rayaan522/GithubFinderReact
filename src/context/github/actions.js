@@ -16,11 +16,11 @@ import axios from 'axios';
 // }
 
  export const searchUsers = async text => {
-     const res = await github.get( `/search/users/?q=${text}`);
+     const res = await github.get( `/search/users?q=${text}`);
      return res.data.items;
  }
 
- export const getUserAndRepos = async username =>{
+ export const getUserAndRepos = async username => {
      const repos = await github.get(`/users/${username}/repos?per_page=5&sort=created:asc?`);
 
      const user = await github.get(`/users/${username}`);
